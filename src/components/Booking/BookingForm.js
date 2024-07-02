@@ -48,7 +48,7 @@ const BookingForm = () => {
     console.log(formData);
     try {
       const response = await axios.post(
-        "https://restaurant-server-chi.vercel.app/api/reservation",
+        "https://opulenza-verve-server-hvpl.vercel.app/api/reservation",
         formData
       );
       Swal.fire({

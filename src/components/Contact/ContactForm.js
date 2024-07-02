@@ -23,7 +23,10 @@ function ContactForm() {
     e.preventDefault();
 
     axios
-      .post("https://restaurant-server-chi.vercel.app/api/contact", formData)
+      .post(
+        "https://opulenza-verve-server-hvpl.vercel.app/api/contact",
+        formData
+      )
       .then((response) => {
         console.log(response.data);
         Swal.fire({

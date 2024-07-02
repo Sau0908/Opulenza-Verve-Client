@@ -40,39 +40,39 @@ const AuthProvider = ({ children }) => {
 
   const updateUserProfile = (name, photo) => {
     return updateProfile(auth.currentUser, {
-      displayName: name, photoURL: photo
-    })
-  }
+      displayName: name,
+      photoURL: photo,
+    });
+  };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, currentUser => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log('current user', currentUser);
+      console.log("current user", currentUser);
 
       // get and set token
       if (currentUser) {
-        axios.post('https://restaurant-server-chi.vercel.app/jwt', { email: currentUser.email })
-          .then(data => {
-            // console.log(data.data.token)
-            localStorage.setItem('access-token', data.data.token)
-            setLoading(false);
+        axios
+          .post("https://opulenza-verve-server-hvpl.vercel.app/jwt", {
+            email: currentUser.email,
           })
+          .then((data) => {
+            // console.log(data.data.token)
+            localStorage.setItem("access-token", data.data.token);
+            setLoading(false);
+          });
+      } else {
+        localStorage.removeItem("access-token");
       }
-      else {
-        localStorage.removeItem('access-token')
-      }
-
-
     });
     return () => {
       return unsubscribe();
-    }
-  }, [])
+    };
+  }, []);
 
   const signOutUser = () => {
     return signOut(auth);
   };
-
 
   const authInfo = {
     user,
@@ -82,7 +82,7 @@ const AuthProvider = ({ children }) => {
     signOutUser,
     forgetPassword,
     loading,
-    updateUserProfile
+    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

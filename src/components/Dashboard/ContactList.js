@@ -7,7 +7,7 @@ function ContactList() {
 
   const fetchContactUs = () => {
     axios
-      .get("https://restaurant-server-chi.vercel.app/api/contact") // Replace with your backend API URL
+      .get("https://opulenza-verve-server-hvpl.vercel.app/api/contact") // Replace with your backend API URL
       .then((response) => {
         setContacts(response.data); // Assuming the response is an array of contact
       })
@@ -21,7 +21,7 @@ function ContactList() {
     console.log(id);
 
     axios
-      .delete(`http://localhost:5000/api/contact/${id}`)
+      .delete(`https://opulenza-verve-server-hvpl.vercel.app/api/contact/${id}`)
       .then((response) => {
         console.log("Contact Item deleted successfully:", response.data);
         fetchContactUs();

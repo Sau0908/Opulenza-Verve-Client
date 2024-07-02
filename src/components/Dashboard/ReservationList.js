@@ -9,7 +9,7 @@ const ReservationList = () => {
   const fetchTables = async () => {
     try {
       const response = await axios.get(
-        "https://restaurant-server-chi.vercel.app/api/reservation"
+        "https://opulenza-verve-server-hvpl.vercel.app/api/reservation"
       );
       setTables(response.data);
       console.log(response.data);
@@ -23,7 +23,7 @@ const ReservationList = () => {
 
     axios
       .delete(
-        `https://restaurant-server-chi.vercel.app/api/reservation/${reservationId}`
+        `https://opulenza-verve-server-hvpl.vercel.app/api/reservation/${reservationId}`
       )
       .then((response) => {
         console.log("Reservation deleted successfully:", response.data);
@@ -45,15 +45,18 @@ const ReservationList = () => {
     tableId
   ) => {
     axios
-      .post("http://localhost:5000/api/reservation/sendConfirmationEmail", {
-        reservationId: reservationId,
-        userEmail: userEmail,
-        userName: userName,
-        userDate: userDate,
-        userSize: userSize,
-        userTime: userTime,
-        userPeriod: userPeriod,
-      })
+      .post(
+        "https://opulenza-verve-server-hvpl.vercel.app/api/reservation/sendConfirmationEmail",
+        {
+          reservationId: reservationId,
+          userEmail: userEmail,
+          userName: userName,
+          userDate: userDate,
+          userSize: userSize,
+          userTime: userTime,
+          userPeriod: userPeriod,
+        }
+      )
       .then((response) => {
         console.log("Confirmation email sent successfully:", response.data);
         setTimeout(() => {
@@ -78,15 +81,18 @@ const ReservationList = () => {
   ) => {
     console.log(reservationId);
     axios
-      .post("http://localhost:5000/api/reservation/sendDeleteEmail", {
-        reservationId: reservationId,
-        userEmail: userEmail,
-        userName: userName,
-        userDate: userDate,
-        userSize: userSize,
-        userTime: userTime,
-        userPeriod: userPeriod,
-      })
+      .post(
+        "https://opulenza-verve-server-hvpl.vercel.app/api/reservation/sendDeleteEmail",
+        {
+          reservationId: reservationId,
+          userEmail: userEmail,
+          userName: userName,
+          userDate: userDate,
+          userSize: userSize,
+          userTime: userTime,
+          userPeriod: userPeriod,
+        }
+      )
       .then((response) => {
         console.log("Cancellation email sent successfully:", response.data);
         handleDeleteReservation(reservationId);

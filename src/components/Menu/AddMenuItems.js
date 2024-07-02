@@ -25,7 +25,7 @@ const AddMenuItems = () => {
     };
     console.log(addMenu);
 
-    fetch("https://restaurant-server-chi.vercel.app/menu", {
+    fetch("https://opulenza-verve-server-hvpl.vercel.app/menu", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -55,7 +55,10 @@ const AddMenuItems = () => {
 
         <div className="hero min-h-screen">
           <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
-            <form onSubmit={handleAddMenu} className="card md:ms-20 flex-shrink-0 w-full max-w-sm shadow-2xl my-4 border bg-black bg-opacity-40">
+            <form
+              onSubmit={handleAddMenu}
+              className="card md:ms-20 flex-shrink-0 w-full max-w-sm shadow-2xl my-4 border bg-black bg-opacity-40"
+            >
               <div className="card-body ">
                 <div className="form-control">
                   <label className="label">
@@ -162,12 +165,14 @@ const AddMenuItems = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
                 <div>
                   <div className="card w-44 h-100 text-white shadow-xl bg-black bg-opacity-40">
-                    <figure><img src="https://img.freepik.com/free-photo/plate-biryani-with-bunch-food-it_505751-3819.jpg?t=st=1694537186~exp=1694540786~hmac=11dd7de9504c359ef084d9cd940f2bf27163e79687d28fc4461498502d87935f&w=826" alt="Food" /></figure>
+                    <figure>
+                      <img
+                        src="https://img.freepik.com/free-photo/plate-biryani-with-bunch-food-it_505751-3819.jpg?t=st=1694537186~exp=1694540786~hmac=11dd7de9504c359ef084d9cd940f2bf27163e79687d28fc4461498502d87935f&w=826"
+                        alt="Food"
+                      />
+                    </figure>
                     <div className="card-body">
-                      <h2 className="card-title">
-                        Chicken Biriyani 
-                        
-                      </h2>
+                      <h2 className="card-title">Chicken Biriyani</h2>
                       <div className="card-actions">
                         <div className="badge badge-outline">Rs. 200</div>
                       </div>
@@ -176,12 +181,14 @@ const AddMenuItems = () => {
                 </div>
                 <div>
                   <div className="card w-44 h-100 text-white shadow-xl bg-black bg-opacity-40">
-                    <figure><img src="https://img.freepik.com/premium-photo/pizza-with-salami-mozzarella-cheese-wooden-board_67394-1921.jpg?w=740" alt="Food" /></figure>
+                    <figure>
+                      <img
+                        src="https://img.freepik.com/premium-photo/pizza-with-salami-mozzarella-cheese-wooden-board_67394-1921.jpg?w=740"
+                        alt="Food"
+                      />
+                    </figure>
                     <div className="card-body">
-                      <h2 className="card-title">
-                          Marghirita Pizza
-                        
-                      </h2>
+                      <h2 className="card-title">Marghirita Pizza</h2>
                       <div className="card-actions">
                         <div className="badge badge-outline">Rs. 400</div>
                       </div>
@@ -190,12 +197,14 @@ const AddMenuItems = () => {
                 </div>
                 <div>
                   <div className="card w-44 h-100 text-white shadow-xl bg-black bg-opacity-40">
-                    <figure><img src="https://img.freepik.com/free-photo/bowl-salad-with-lemon-wedge-lemon-wedge-side_1340-23287.jpg?t=st=1694797737~exp=1694801337~hmac=aabae53be60f82a126c16b589de27ed9e37829410860dd35b26c848528ca9d58&w=740" alt="Food" /></figure>
+                    <figure>
+                      <img
+                        src="https://img.freepik.com/free-photo/bowl-salad-with-lemon-wedge-lemon-wedge-side_1340-23287.jpg?t=st=1694797737~exp=1694801337~hmac=aabae53be60f82a126c16b589de27ed9e37829410860dd35b26c848528ca9d58&w=740"
+                        alt="Food"
+                      />
+                    </figure>
                     <div className="card-body">
-                      <h2 className="card-title">
-                        Caprese Salad
-                        
-                      </h2>
+                      <h2 className="card-title">Caprese Salad</h2>
                       <div className="card-actions">
                         <div className="badge badge-outline">Rs. 200</div>
                       </div>
@@ -204,12 +213,14 @@ const AddMenuItems = () => {
                 </div>
                 <div>
                   <div className="card w-44 h-100 text-white shadow-xl bg-black bg-opacity-40">
-                    <figure><img src="https://www.indianveggiedelight.com/wp-content/uploads/2017/03/thumnail_coocnut_rice-min-1-e1499381691477.jpg" alt="Food" /></figure>
+                    <figure>
+                      <img
+                        src="https://www.indianveggiedelight.com/wp-content/uploads/2017/03/thumnail_coocnut_rice-min-1-e1499381691477.jpg"
+                        alt="Food"
+                      />
+                    </figure>
                     <div className="card-body">
-                      <h2 className="card-title">
-                        Coconut Rice
-                        
-                      </h2>
+                      <h2 className="card-title">Coconut Rice</h2>
                       <div className="card-actions">
                         <div className="badge badge-outline">Rs. 200</div>
                       </div>
@@ -218,12 +229,14 @@ const AddMenuItems = () => {
                 </div>
                 <div>
                   <div className="card w-44 h-100 text-white shadow-xl bg-black bg-opacity-40">
-                    <figure><img src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/4-april/Tamil_Nadu_pepper_rasam_Ground_Pepper_Rasam_Recipe-3.jpg" alt="Food" /></figure>
+                    <figure>
+                      <img
+                        src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/4-april/Tamil_Nadu_pepper_rasam_Ground_Pepper_Rasam_Recipe-3.jpg"
+                        alt="Food"
+                      />
+                    </figure>
                     <div className="card-body">
-                      <h2 className="card-title">
-                        Rasam
-                        
-                      </h2>
+                      <h2 className="card-title">Rasam</h2>
                       <div className="card-actions">
                         <div className="badge badge-outline">Rs. 100</div>
                       </div>
@@ -232,12 +245,14 @@ const AddMenuItems = () => {
                 </div>
                 <div>
                   <div className="card w-44 h-100 text-white shadow-xl bg-black bg-opacity-40">
-                    <figure><img src="https://img.freepik.com/free-photo/plate-biryani-with-bunch-food-it_505751-3819.jpg?t=st=1694537186~exp=1694540786~hmac=11dd7de9504c359ef084d9cd940f2bf27163e79687d28fc4461498502d87935f&w=826" alt="Food" /></figure>
+                    <figure>
+                      <img
+                        src="https://img.freepik.com/free-photo/plate-biryani-with-bunch-food-it_505751-3819.jpg?t=st=1694537186~exp=1694540786~hmac=11dd7de9504c359ef084d9cd940f2bf27163e79687d28fc4461498502d87935f&w=826"
+                        alt="Food"
+                      />
+                    </figure>
                     <div className="card-body">
-                      <h2 className="card-title">
-                        Mutton Biriyani
-                        
-                      </h2>
+                      <h2 className="card-title">Mutton Biriyani</h2>
                       <div className="card-actions">
                         <div className="badge badge-outline">Rs. 200</div>
                       </div>
@@ -246,7 +261,6 @@ const AddMenuItems = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
