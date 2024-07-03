@@ -5,7 +5,7 @@ import ContactList from "./ContactList";
 import HeaderForRoute from "../shared/HeaderForRoute";
 
 function Dashboard() {
-  const [activeTab, setActiveTab] = useState("reservation"); // Default active tab
+  const [activeTab, setActiveTab] = useState("reservation");
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);

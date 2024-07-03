@@ -5,7 +5,6 @@ const ReservationList = () => {
   const [tables, setTables] = useState([]);
   const [confirmedTables, setConfirmedTables] = useState([]);
 
-  // Fetch available tables from the backend
   const fetchTables = async () => {
     try {
       const response = await axios.get(
@@ -13,9 +12,7 @@ const ReservationList = () => {
       );
       setTables(response.data);
       console.log(response.data);
-    } catch (error) {
-      // Handle error, e.g., show an error message to the user
-    }
+    } catch (error) {}
   };
 
   const handleDeleteReservation = (reservationId) => {
@@ -62,7 +59,7 @@ const ReservationList = () => {
         setTimeout(() => {
           handleDeleteReservation(reservationId);
         }, 10000);
-        setConfirmedTables([...confirmedTables, tableId]); // Mark this table as confirmed
+        setConfirmedTables([...confirmedTables, tableId]);
         fetchTables();
       })
       .catch((error) => {

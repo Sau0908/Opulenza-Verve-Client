@@ -7,7 +7,7 @@ function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "", // Add subject field
+    subject: "",
     message: "",
   });
 

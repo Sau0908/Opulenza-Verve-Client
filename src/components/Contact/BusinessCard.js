@@ -85,7 +85,7 @@ function BusinessCard() {
             </p>
           </div>
         </div>
-        {/* Place Order Button */}
+
         <SocialLink />
       </div>
     </>

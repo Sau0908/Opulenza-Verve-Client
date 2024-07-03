@@ -7,16 +7,15 @@ function ContactList() {
 
   const fetchContactUs = () => {
     axios
-      .get("https://opulenza-verve-server-hvpl.vercel.app/api/contact") // Replace with your backend API URL
+      .get("https://opulenza-verve-server-hvpl.vercel.app/api/contact")
       .then((response) => {
-        setContacts(response.data); // Assuming the response is an array of contact
+        setContacts(response.data);
       })
       .catch((error) => {
         console.error(error);
       });
   };
 
-  // Function to delete a contact by ID
   const handleDeleteContact = (id) => {
     console.log(id);
 
