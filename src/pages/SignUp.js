@@ -8,7 +8,7 @@ const SignUp = () => {
         heading="Signup To Create An Account"
         paragraph="Already have an account? "
         linkName="Login"
-        linkUrl="/"
+        linkUrl="/login"
       />
       <SignupComp />
     </div>

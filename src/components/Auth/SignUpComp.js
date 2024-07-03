@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { signupFields } from "./FormFields"; // Define your signup form fields similar to loginFields
+import { signupFields } from "./FormFields";
 import Input from "./Input";
 import FormExtra from "./FormExtra";
 import FormAction from "./FormAction";
@@ -8,7 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const fields = signupFields; // Assuming you have defined your signup form fields structure
+const fields = signupFields;
 let fieldsState = {};
 fields.forEach((field) => (fieldsState[field.id] = ""));
 
